@@ -23,7 +23,7 @@ def delete(diretores, coluna, valor):
 
 def  update ( tabela , chave , valor_chave , colunas , valores ):
     sets  = [ f " { coluna } =% s"  para  coluna  em  colunas ]
-    execute ( f "" "ATUALIZAÇÃO { tabela } SET { ", " . join ( conjuntos ) } ONDE { chave } =% s" "" , valores  + [ valor_chave ])
+    execute ( f "" "UPDATE { tabela } SET { ", " . join ( conjuntos ) } WHERE { chave } =% s" "" , valores  + [ valor_chave ])
 
 def select(tabela, chave, valor_chave):
      return (f "SELECT * FROM { tabela} WHERE { coluna } LIKE %s", [valor_chave])
