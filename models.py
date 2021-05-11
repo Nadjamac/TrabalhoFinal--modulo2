@@ -10,7 +10,7 @@ def delete_diretores (id_diretores)]
     delete("diretores","id",id_diretores)
 
 def select_diretores(nome_completo):
-    return select_locadora("diretores","nome_completo",nome_completo)
+    return select_like("diretores","nome_completo",nome_completo)
 
 def get_diretores
 
@@ -24,7 +24,7 @@ def delete_filmes (id_filme):
     delete ("filmes","id", id_filmes)
 
 def select_filmes( titulo ):
-    return select_locadora("filmes",  "titulo",  titulo )
+    return select_like("filmes",  "titulo",  titulo )
 
 def get_filmes
 
@@ -38,7 +38,7 @@ def delete_generos(id):
     delete_generos("generos","id", id )
 
 def select_generos(data_inicio,data_fim):
-    return select_locadora( "generos " ,"data_inicio","data_fim",data_inicio,data_fim )
+    return select_like( "generos " ,"data_inicio","data_fim",data_inicio,data_fim )
 
 def get_generos():
 
@@ -50,7 +50,7 @@ def update_locacoes(id, data_inicio,data_fim , filmes_id,usuarios_id):
     update_locacao("locacoes","id", "data_inicio","data_fim" ,[data_inicio,data_fim ] )
 
 def select_locacoes (id, data_inicio,data_fim ):
-    return_select_locacoes("locacoes","id"," data_inicio","data_fim",[ data_inicio,data_fim ])
+    return_select_like("locacoes","id"," data_inicio","data_fim",[ data_inicio,data_fim ])
 
 def delete_locacao(id):
     delete("locacoes","id",id)
